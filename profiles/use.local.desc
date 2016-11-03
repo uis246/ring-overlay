@@ -1,0 +1,35 @@
+# This file is deprecated as per GLEP 56 in favor of metadata.xml.
+# Please add your descriptions to your package's metadata.xml ONLY.
+# * generated automatically using pmaint *
+
+dev-libs/msgpack:cxx - 
+dev-libs/msgpack:static-libs - 
+dev-libs/msgpack:test - 
+net-voip/ring-daemon:system-asio - Uses the system library for asio
+net-voip/ring-daemon:system-boost - Uses the system library for boost
+net-voip/ring-daemon:system-cryptopp - Uses the system library for cryptopp
+net-voip/ring-daemon:system-flac - Uses the system library for flac
+net-voip/ring-daemon:system-gcrypt - Uses the system library for gcrypt
+net-voip/ring-daemon:system-gmp - Uses the system library for gmp
+net-voip/ring-daemon:system-gnutls - Uses the system library for gnutls
+net-voip/ring-daemon:system-gpg-error - Uses the system library for gpg-error
+net-voip/ring-daemon:system-gsm - Uses the system library for gsm
+net-voip/ring-daemon:system-iconv - Uses the system library for iconv
+net-voip/ring-daemon:system-jack - Uses the system library for jack
+net-voip/ring-daemon:system-jsoncpp - Uses the system library for jsoncpp
+net-voip/ring-daemon:system-msgpack - Uses the system library for msgpack
+net-voip/ring-daemon:system-nettle - Uses the system library for nettle
+net-voip/ring-daemon:system-ogg - Uses the system library for ogg
+net-voip/ring-daemon:system-opendht - Uses the system library for opendht
+net-voip/ring-daemon:system-opus - Uses the system library for opus
+net-voip/ring-daemon:system-pcre - Uses the system library for pcre
+net-voip/ring-daemon:system-portaudio - Uses the system library for portaudio
+net-voip/ring-daemon:system-samplerate - Uses the system library for samplerate
+net-voip/ring-daemon:system-sndfile - Uses the system library for sndfile
+net-voip/ring-daemon:system-speex - Uses the system library for speex
+net-voip/ring-daemon:system-upnp - Uses the system library for upnp
+net-voip/ring-daemon:system-vorbis - Uses the system library for vorbis
+net-voip/ring-daemon:system-vpx - Uses the system library for vpx
+net-voip/ring-daemon:system-x264 - Uses the system library for x264
+net-voip/ring-daemon:system-yaml-cpp - Uses the system library for yaml-cpp
+net-voip/ring-daemon:system-zlib - Uses the system library for zlib
