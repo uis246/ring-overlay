@@ -4,12 +4,15 @@
 
 EAPI=6
 
-inherit eutils
+inherit eutils versionator
+
+#MY_REVISION="$(get_version_component_range 1)"
+#MY_PV="$(get_version_component_range 0).${MY_REVISION}.$(get_version_component_range 1)"
 
 DESCRIPTION="Ring daemon"
 HOMEPAGE="https://projects.savoirfairelinux.com/projects/ring-daemon/wiki"
 
-SRC_URI="https://dl.ring.cx/ring-release/tarballs/ring_20161104.4.17a0616.tar.gz"
+SRC_URI="https://dl.ring.cx/ring-release/tarballs/ring_20161107.1.0ac5fac.tar.gz"
 
 LICENSE="GPL-3"
 
@@ -46,6 +49,7 @@ DEPEND="system-asio? ( >=dev-cpp/asio-1.10.8 )
 	system-zlib? ( >=sys-libs/zlib-1.2.8 )
 	system-gnutls? ( >=net-libs/gnutls-3.4.14 )
 	dev-libs/dbus-c++
+	media-sound/pulseaudio
 	x11-libs/libva"
 
 # boost should be at 1.61
@@ -211,14 +215,14 @@ src_configure() {
 	cd build
 	../bootstrap
 
-	make
+	make || die "Bundled libraries could not be compiled"
 
 	cd ../..
 	# patch jsoncpp include
 	grep -rli '#include <json/json.h>' . | xargs -i@ sed -i 's/#include <json\/json.h>/#include <jsoncpp\/json\/json.h>/g' @
-	./autogen.sh
+	./autogen.sh || die "Autogen failed"
 
-	./configure --prefix=/usr
+	./configure --prefix=/usr || "Configure failed"
 	sed -i.bak 's/LIBS = \(.*\)$/LIBS = \1 -lopus /g' bin/Makefile
 }
 

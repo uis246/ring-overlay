@@ -9,7 +9,7 @@ inherit eutils cmake-utils gnome2-utils
 DESCRIPTION="Gnome Ring client"
 HOMEPAGE="https://projects.savoirfairelinux.com/projects/ring-gnome-client/wiki"
 
-SRC_URI="https://dl.ring.cx/ring-release/tarballs/ring_20161104.4.17a0616.tar.gz"
+SRC_URI="https://dl.ring.cx/ring-release/tarballs/ring_20161107.1.0ac5fac.tar.gz"
 
 LICENSE="GPL-3"
 

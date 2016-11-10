@@ -9,7 +9,7 @@ inherit eutils cmake-utils
 DESCRIPTION="libringclient is the common interface for Ring applications"
 HOMEPAGE="https://projects.savoirfairelinux.com/projects/libringclient/wiki"
 
-SRC_URI="https://dl.ring.cx/ring-release/tarballs/ring_20161104.4.17a0616.tar.gz"
+SRC_URI="https://dl.ring.cx/ring-release/tarballs/ring_20161107.1.0ac5fac.tar.gz"
 
 LICENSE="GPL-3"
 
