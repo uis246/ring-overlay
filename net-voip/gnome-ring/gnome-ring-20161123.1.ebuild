@@ -4,19 +4,29 @@
 
 EAPI=6
 
-inherit eutils cmake-utils gnome2-utils
+if [[ ${PV} == *99999999* ]]; then
+	inherit eutils git-r3 cmake-utils gnome2-utils
+
+	EGIT_REPO_URI="https://gerrit-ring.savoirfairelinux.com/ring-client-gnome"
+	SRC_URI=""
+
+	KEYWORDS=""
+else
+	inherit eutils cmake-utils gnome2-utils
+
+	COMMIT_HASH="3120ba5"
+	MY_SRC_P="ring_${PV}.${COMMIT_HASH}"
+	SRC_URI="https://dl.ring.cx/ring-release/tarballs/${MY_SRC_P}.tar.gz"
+
+	KEYWORDS="~amd64"
+fi
 
 DESCRIPTION="Gnome Ring client"
 HOMEPAGE="https://projects.savoirfairelinux.com/projects/ring-gnome-client/wiki"
 
-COMMIT_HASH="6f76da7"
-MY_SRC_P="ring_${PV}.${COMMIT_HASH}"
-SRC_URI="https://dl.ring.cx/ring-release/tarballs/${MY_SRC_P}.tar.gz"
-
 LICENSE="GPL-3"
 
 SLOT="0"
-KEYWORDS="~amd64"
 
 IUSE=""
 
@@ -26,6 +36,7 @@ DEPEND="=net-libs/libringclient-${PVR}
 	>=dev-qt/qtcore-5
 	>=dev-qt/qtgui-5
 	>=dev-qt/qtwidgets-5
+	|| ( net-libs/webkit-gtk:4 net-libs/webkit-gtk:3 )
 	x11-themes/gnome-icon-theme
 	gnome-extra/evolution-data-server
 	x11-libs/libnotify
@@ -38,7 +49,7 @@ S=${WORKDIR}/ring-project/client-gnome
 src_configure() {
 	mkdir build
 	cd build
-	cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DGSETTINGS_COMPILE=OFF -DCMAKE_BUILD_TYPE=Release
+	cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DGSETTINGS_COMPILE=OFF -DCMAKE_BUILD_TYPE=Release || die "Configure failed"
 }
 
 src_compile() {

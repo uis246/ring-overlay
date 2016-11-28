@@ -4,22 +4,31 @@
 
 EAPI=6
 
-inherit eutils versionator
+if [[ ${PV} == *99999999* ]]; then
+	inherit eutils git-r3
 
-#MY_REVISION="$(get_version_component_range 1)"
-#MY_PV="$(get_version_component_range 0).${MY_REVISION}.$(get_version_component_range 1)"
+	EGIT_REPO_URI="https://gerrit-ring.savoirfairelinux.com/ring-daemon"
+	SRC_URI=""
+
+	IUSE="-system-asio -system-boost -system-cryptopp -system-flac -system-gcrypt -system-gmp -system-gpg-error -system-gsm -system-iconv -system-jack -system-jsoncpp -system-msgpack -system-nettle -system-ogg -system-opendht -system-opus -system-pcre -system-portaudio -system-samplerate -system-sndfile -system-speex -system-upnp -system-vorbis -system-vpx -system-x264 -system-yaml-cpp -system-zlib -system-gnutls"
+	KEYWORDS=""
+else
+	inherit eutils versionator
+
+	COMMIT_HASH="3120ba5"
+	MY_SRC_P="ring_${PV}.${COMMIT_HASH}"
+	SRC_URI="https://dl.ring.cx/ring-release/tarballs/${MY_SRC_P}.tar.gz"
+
+	IUSE="system-asio system-boost +system-cryptopp +system-flac +system-gcrypt +system-gmp +system-gpg-error +system-gsm system-iconv +system-jack +system-jsoncpp +system-msgpack +system-nettle +system-ogg +system-opendht +system-opus +system-pcre +system-portaudio +system-samplerate +system-sndfile +system-speex +system-upnp +system-vorbis +system-vpx +system-x264 +system-yaml-cpp +system-zlib system-gnutls"
+	KEYWORDS="~amd64"
+fi
 
 DESCRIPTION="Ring daemon"
 HOMEPAGE="https://projects.savoirfairelinux.com/projects/ring-daemon/wiki"
 
-SRC_URI="https://dl.ring.cx/ring-release/tarballs/ring_20161107.1.0ac5fac.tar.gz"
-
 LICENSE="GPL-3"
 
 SLOT="0"
-KEYWORDS="~amd64"
-
-IUSE="system-asio system-boost +system-cryptopp +system-flac +system-gcrypt +system-gmp +system-gpg-error +system-gsm system-iconv +system-jack +system-jsoncpp +system-msgpack +system-nettle +system-ogg +system-opendht +system-opus +system-pcre +system-portaudio +system-samplerate +system-sndfile +system-speex +system-upnp +system-vorbis +system-vpx +system-x264 +system-yaml-cpp +system-zlib system-gnutls"
 
 DEPEND="system-asio? ( >=dev-cpp/asio-1.10.8 )
 	system-boost? ( >=dev-libs/boost-1.56.0 )
@@ -49,7 +58,7 @@ DEPEND="system-asio? ( >=dev-cpp/asio-1.10.8 )
 	system-zlib? ( >=sys-libs/zlib-1.2.8 )
 	system-gnutls? ( >=net-libs/gnutls-3.4.14 )
 	dev-libs/dbus-c++
-	media-sound/pulseaudio
+	|| ( media-sound/pulseaudio media-sound/apulse )
 	x11-libs/libva"
 
 # boost should be at 1.61
@@ -224,6 +233,11 @@ src_configure() {
 
 	./configure --prefix=/usr || "Configure failed"
 	sed -i.bak 's/LIBS = \(.*\)$/LIBS = \1 -lopus /g' bin/Makefile
+}
+
+src_install() {
+	default
+	rm "${D}usr/lib/libring.la"
 }
 
 # TODO add a log warning if
