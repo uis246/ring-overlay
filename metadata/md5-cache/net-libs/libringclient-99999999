@@ -2,10 +2,10 @@ DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND==net-voip/ring-daemon-99999999 >=dev-qt/qtdbus-5 >=dev-vcs/git-1.8.2.1 sys-devel/make >=dev-util/cmake-2.8.12
 DESCRIPTION=libringclient is the common interface for Ring applications
 EAPI=6
-HOMEPAGE=https://projects.savoirfairelinux.com/projects/libringclient/wiki
+HOMEPAGE=https://tuleap.ring.cx/projects/ring
 LICENSE=GPL-3
 RDEPEND==net-voip/ring-daemon-99999999 >=dev-qt/qtdbus-5
 SLOT=0
 _eclass_exported_funcs=src_unpack:git-r3 src_prepare:cmake-utils src_configure:- src_compile:- src_test:cmake-utils src_install:-
 _eclasses_=cmake-utils	16e40479aefbbed67ea20779992ab90e	eutils	b83a2420b796f7c6eff682679d08fe25	flag-o-matic	7366202dd55cb8f018f5d450d54e7749	git-r3	e928b84a9f6f1d9076d1d27687876dc6	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=3f2c950b768e535203d5c44257e36e52
+_md5_=8b41f3623e67280b682a436de2b8dbd6
