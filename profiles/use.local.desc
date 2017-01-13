@@ -5,7 +5,6 @@
 dev-libs/msgpack:cxx - 
 dev-libs/msgpack:static-libs - 
 dev-libs/msgpack:test - 
-net-voip/ring-daemon:system-asio - Uses the system library for asio
 net-voip/ring-daemon:system-boost - Uses the system library for boost
 net-voip/ring-daemon:system-cryptopp - Uses the system library for cryptopp
 net-voip/ring-daemon:system-flac - Uses the system library for flac
