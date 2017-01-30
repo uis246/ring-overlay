@@ -5,8 +5,23 @@
 dev-libs/msgpack:cxx - 
 dev-libs/msgpack:static-libs - 
 dev-libs/msgpack:test - 
+net-libs/pjproject:amr - Inlcude AMR codec in the build
+net-libs/pjproject:epoll - Use /dev/epoll ioqueue on Linux (experimental)
+net-libs/pjproject:g711 - Include G.711 codecs in the build
+net-libs/pjproject:g722 - Include G.722 codec in the build
+net-libs/pjproject:g7221 - Include G.722.1 codec in the build
+net-libs/pjproject:ilbc - Include iLBC codec in the build
+net-libs/pjproject:l16 - Include Linear/L16 codec family in the build
+net-libs/pjproject:libyuv - Include libyuv in the build
+net-libs/pjproject:openh264 - Include Open H.264 support in the build
+net-libs/pjproject:opus - Include OPUS support in the build
+net-libs/pjproject:resample - Include resampling implementations in the build
+net-libs/pjproject:silk - Include SILK support in the build
+net-libs/pjproject:v4l2 - Include Video4Linux v2 support in the build
+net-libs/pjproject:webrtc - Enable WebRTC support
 net-voip/ring-daemon:system-boost - Uses the system library for boost
 net-voip/ring-daemon:system-cryptopp - Uses the system library for cryptopp
+net-voip/ring-daemon:system-ffmpeg - Uses the system library for ffmpeg
 net-voip/ring-daemon:system-flac - Uses the system library for flac
 net-voip/ring-daemon:system-gcrypt - Uses the system library for gcrypt
 net-voip/ring-daemon:system-gmp - Uses the system library for gmp
@@ -22,11 +37,13 @@ net-voip/ring-daemon:system-ogg - Uses the system library for ogg
 net-voip/ring-daemon:system-opendht - Uses the system library for opendht
 net-voip/ring-daemon:system-opus - Uses the system library for opus
 net-voip/ring-daemon:system-pcre - Uses the system library for pcre
+net-voip/ring-daemon:system-pjproject - Uses the system library for pjproject
 net-voip/ring-daemon:system-portaudio - Uses the system library for portaudio
 net-voip/ring-daemon:system-samplerate - Uses the system library for samplerate
 net-voip/ring-daemon:system-sndfile - Uses the system library for sndfile
 net-voip/ring-daemon:system-speex - Uses the system library for speex
 net-voip/ring-daemon:system-upnp - Uses the system library for upnp
+net-voip/ring-daemon:system-uuid - Uses the system library for uuid
 net-voip/ring-daemon:system-vorbis - Uses the system library for vorbis
 net-voip/ring-daemon:system-vpx - Uses the system library for vpx
 net-voip/ring-daemon:system-x264 - Uses the system library for x264
