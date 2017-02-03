@@ -19,6 +19,7 @@ net-libs/pjproject:resample - Include resampling implementations in the build
 net-libs/pjproject:silk - Include SILK support in the build
 net-libs/pjproject:v4l2 - Include Video4Linux v2 support in the build
 net-libs/pjproject:webrtc - Enable WebRTC support
+net-voip/ring-daemon:system-asio - Uses the system library for asio
 net-voip/ring-daemon:system-boost - Uses the system library for boost
 net-voip/ring-daemon:system-cryptopp - Uses the system library for cryptopp
 net-voip/ring-daemon:system-ffmpeg - Uses the system library for ffmpeg
@@ -39,6 +40,7 @@ net-voip/ring-daemon:system-opus - Uses the system library for opus
 net-voip/ring-daemon:system-pcre - Uses the system library for pcre
 net-voip/ring-daemon:system-pjproject - Uses the system library for pjproject
 net-voip/ring-daemon:system-portaudio - Uses the system library for portaudio
+net-voip/ring-daemon:system-restbed - Uses the system library for restbed
 net-voip/ring-daemon:system-samplerate - Uses the system library for samplerate
 net-voip/ring-daemon:system-sndfile - Uses the system library for sndfile
 net-voip/ring-daemon:system-speex - Uses the system library for speex

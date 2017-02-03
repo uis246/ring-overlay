@@ -1,8 +1,8 @@
 dev-libs/msgpack 1.2.0 2.0.0 2.1.0: MessagePack is a binary-based efficient data interchange format
-net-libs/libringclient 20170112.1 20170119.1 20170126.1 99999999: libringclient is the common interface for Ring applications
+net-libs/libringclient 20170112.1 20170119.1 20170126.1 20170202.1 99999999: libringclient is the common interface for Ring applications
 net-libs/opendht 1.2.1 1.3.0 9999: A lightweight C++11 Distributed Hash Table implementation
 net-libs/pjproject 2.5.5: Open source SIP, Media, and NAT Traversal Library
 net-libs/restbed 4.0 4.5 9999: For applications that require seamless and secure communication over HTTP
-net-voip/gnome-ring 20170112.1 20170119.1 20170126.1 99999999: Gnome Ring client
+net-voip/gnome-ring 20170112.1 20170119.1 20170126.1 20170202.1 99999999: Gnome Ring client
 net-voip/kde-ring 99999999: KDE Ring client
-net-voip/ring-daemon 20170112.1 20170119.1 20170126.1 99999999: Ring daemon
+net-voip/ring-daemon 20170112.1 20170119.1 20170126.1 20170202.1 99999999: Ring daemon
