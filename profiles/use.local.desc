@@ -5,6 +5,8 @@
 dev-libs/msgpack:cxx - 
 dev-libs/msgpack:static-libs - 
 dev-libs/msgpack:test - 
+net-libs/opendht:python - Install Python bindings. Requires dev-python/cython.
+net-libs/opendht:tools - Install extra opendht tools (dhtchat, dhtnode and dhtscanner).
 net-libs/pjproject:amr - Inlcude AMR codec in the build
 net-libs/pjproject:epoll - Use /dev/epoll ioqueue on Linux (experimental)
 net-libs/pjproject:g711 - Include G.711 codecs in the build
