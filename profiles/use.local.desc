@@ -35,38 +35,8 @@ net-voip/ring-daemon:restbed - An alternative to the dbus client to communicate 
 net-voip/ring-daemon:ringns - Ring name service, depends on net-libs/restbed
 net-voip/ring-daemon:sdes - Support for sdes key exchange. It uses dev-libs/libpcre
 net-voip/ring-daemon:speexdsp - Support for speexdp Noise Suppression and Automatic Gain Control
-net-voip/ring-daemon:system-asio - Uses the system library for asio
-net-voip/ring-daemon:system-boost - Uses the system library for boost
-net-voip/ring-daemon:system-cryptopp - Uses the system library for cryptopp
-net-voip/ring-daemon:system-ffmpeg - Uses the system library for ffmpeg
-net-voip/ring-daemon:system-flac - Uses the system library for flac
-net-voip/ring-daemon:system-gcrypt - Uses the system library for gcrypt
-net-voip/ring-daemon:system-gmp - Uses the system library for gmp
 net-voip/ring-daemon:system-gnutls - Uses the system library for gnutls
-net-voip/ring-daemon:system-gpg-error - Uses the system library for gpg-error
-net-voip/ring-daemon:system-gsm - Uses the system library for gsm
-net-voip/ring-daemon:system-iconv - Uses the system library for iconv
-net-voip/ring-daemon:system-jack - Uses the system library for jack
-net-voip/ring-daemon:system-jsoncpp - Uses the system library for jsoncpp
-net-voip/ring-daemon:system-msgpack - Uses the system library for msgpack
-net-voip/ring-daemon:system-nettle - Uses the system library for nettle
-net-voip/ring-daemon:system-ogg - Uses the system library for ogg
-net-voip/ring-daemon:system-opendht - Uses the system library for opendht
-net-voip/ring-daemon:system-opus - Uses the system library for opus
-net-voip/ring-daemon:system-pcre - Uses the system library for pcre
 net-voip/ring-daemon:system-pjproject - Uses the system library for pjproject
-net-voip/ring-daemon:system-portaudio - Uses the system library for portaudio
-net-voip/ring-daemon:system-restbed - Uses the system library for restbed
-net-voip/ring-daemon:system-samplerate - Uses the system library for samplerate
-net-voip/ring-daemon:system-sndfile - Uses the system library for sndfile
-net-voip/ring-daemon:system-speex - Uses the system library for speex
-net-voip/ring-daemon:system-upnp - Uses the system library for upnp
-net-voip/ring-daemon:system-uuid - Uses the system library for uuid
-net-voip/ring-daemon:system-vorbis - Uses the system library for vorbis
-net-voip/ring-daemon:system-vpx - Uses the system library for vpx
-net-voip/ring-daemon:system-x264 - Uses the system library for x264
-net-voip/ring-daemon:system-yaml-cpp - Uses the system library for yaml-cpp
-net-voip/ring-daemon:system-zlib - Uses the system library for zlib
 net-voip/ring-daemon:vdpau - If enable, Ring would sometimes fail to build because of an undefined reference to "vdp_device_create_x11". Enable it on your own risk.
 net-voip/ring-daemon:video - Support video call in Ring
 net-voip/ring-daemon:vpx - Support vp8 audio
