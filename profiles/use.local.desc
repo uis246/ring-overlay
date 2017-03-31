@@ -23,6 +23,8 @@ net-libs/pjproject:resample - Include resampling implementations in the build
 net-libs/pjproject:silk - Include SILK support in the build
 net-libs/pjproject:v4l2 - Include Video4Linux v2 support in the build
 net-libs/pjproject:webrtc - Enable WebRTC support
+net-voip/gnome-ring:appindicator - Uses libappindicator
+net-voip/gnome-ring:qrcode - Uses qrencode
 net-voip/kde-ring:akonadi - Enable support for Akonadi
 net-voip/kde-ring:video - Enable support for video call in Ring
 net-voip/ring-daemon:dbus - The D-Bus xml interfaces, and c++ bindings.
