@@ -38,7 +38,7 @@ DEPEND="dbus? ( =net-voip/ring-daemon-${PVR}[dbus,video] )
 RDEPEND="${DEPEND}"
 
 src_configure() {
-		local mycmakeargs=(
+	local mycmakeargs=(
 		-DENABLE_VIDEO="$(usex video true false)"
 		-DENABLE_STATIC="$(usex static-libs true false)"
 		-DENABLE_LIBWRAP="$(usex !dbus true false)"
