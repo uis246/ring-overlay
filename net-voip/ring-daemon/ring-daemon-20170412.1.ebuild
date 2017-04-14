@@ -14,12 +14,12 @@ if [[ ${PV} == *99999999* ]]; then
 else
 	inherit eutils versionator
 
-	COMMIT_HASH=""
+	COMMIT_HASH="f0ec025"
 	MY_SRC_P="ring_${PV}.${COMMIT_HASH}"
 	SRC_URI="https://dl.ring.cx/ring-release/tarballs/${MY_SRC_P}.tar.gz"
 
 	IUSE="+alsa +dbus doc graph +gsm +hwaccel ipv6 jack -libav +libilbc +nat-pmp +opus portaudio +pulseaudio -restbed +ringns +sdes +speex +speexdsp +upnp +vaapi vdpau +video +vorbis +vpx +x264 system-gnutls system-pjproject"
-	KEYWORDS="~amd64"
+	KEYWORDS=""
 
 	S="${WORKDIR}/ring-project/daemon"
 fi
