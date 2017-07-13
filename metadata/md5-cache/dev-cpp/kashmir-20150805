@@ -3,9 +3,9 @@ DEPEND=>=dev-vcs/git-1.8.2.1
 DESCRIPTION=Library is provide functionality that not present in the C++ standard library.
 EAPI=6
 HOMEPAGE=https://github.com/Corvusoft/kashmir-dependency
-KEYWORDS=~amd64
+KEYWORDS=~amd64 ~x86
 LICENSE=Boost-1.0
 SLOT=0
 _eclass_exported_funcs=src_unpack:git-r3 src_install:-
 _eclasses_=git-r3	cbafa3261c37c7e3af44bb16a34ea390
-_md5_=4450a7c7e0834c33419d5a5f0e54990c
+_md5_=8b5aee51faa4a42a31f2166b82f80954
