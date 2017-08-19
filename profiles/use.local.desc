@@ -26,7 +26,8 @@ net-libs/pjproject:webrtc - Enable WebRTC support
 net-voip/gnome-ring:appindicator - Uses libappindicator
 net-voip/gnome-ring:qrcode - Uses qrencode
 net-voip/kde-ring:akonadi - Enable support for Akonadi
-net-voip/kde-ring:video - Enable support for video call in Ring
+net-voip/kde-ring:system-libringclient - Uses the system library for libringclient
+net-voip/kde-ring:video - Enable support for video calls in Ring
 net-voip/ring-daemon:dbus - The D-Bus xml interfaces, and c++ bindings.
 net-voip/ring-daemon:graph - Create dot graphs in documentations
 net-voip/ring-daemon:hwaccel - Enable hardware-accelerated rendering (only vaapi supports at this moment)
