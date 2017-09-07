@@ -9,5 +9,4 @@ LICENSE=Boost-1.0
 RDEPEND=dev-libs/boost ssl? ( dev-libs/openssl:0= )
 SLOT=0
 SRC_URI=mirror://sourceforge/asio/asio/asio-1.11.0.tar.bz2
-_eclass_exported_funcs=src_prepare:- src_install:-
 _md5_=4ef843f374ebb82a3a1aeb5cf6b849be
