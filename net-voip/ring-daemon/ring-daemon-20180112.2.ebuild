@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -14,7 +14,7 @@ if [[ ${PV} == *99999999* ]]; then
 else
 	inherit eutils versionator
 
-	COMMIT_HASH=""
+	COMMIT_HASH="d0bda53"
 	MY_SRC_P="ring_${PV}.${COMMIT_HASH}"
 	SRC_URI="https://dl.ring.cx/ring-release/tarballs/${MY_SRC_P}.tar.gz"
 
@@ -51,7 +51,7 @@ RDEPEND="system-pjproject? ( >=net-libs/pjproject-2.5.5:2/9999 )
 	speexdsp? ( >=media-libs/speexdsp-1.2_rc3 )
 
 	>=net-libs/gnutls-3.4.14
-	>net-libs/opendht-1.5
+	>=net-libs/opendht-1.5.0
 	>=sys-libs/zlib-1.2.8
 	x11-libs/libva
 
