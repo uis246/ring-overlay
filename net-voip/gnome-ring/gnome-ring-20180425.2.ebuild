@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -13,7 +13,7 @@ if [[ ${PV} == *99999999* ]]; then
 else
 	inherit eutils cmake-utils gnome2-utils
 
-	COMMIT_HASH="89b5eea"
+	COMMIT_HASH="4d29110"
 	MY_SRC_P="ring_${PV}.${COMMIT_HASH}"
 	SRC_URI="https://dl.ring.cx/ring-release/tarballs/${MY_SRC_P}.tar.gz"
 
@@ -43,7 +43,7 @@ DEPEND=">=app-text/libebook-0.1.2
 	>=dev-qt/qtwidgets-5
 	|| ( net-libs/webkit-gtk:4 net-libs/webkit-gtk:3 )
 	sys-devel/gettext
-	x11-themes/gnome-icon-theme
+	x11-themes/adwaita-icon-theme
 	libnotify? ( x11-libs/libnotify )
 "
 
@@ -79,8 +79,10 @@ pkg_preinst() {
 
 pkg_postinst() {
 	gnome2_schemas_update
+	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
 	gnome2_schemas_update
+	gnome2_icon_cache_update
 }

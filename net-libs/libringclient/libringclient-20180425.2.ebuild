@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -13,7 +13,7 @@ if [[ ${PV} == *99999999* ]]; then
 else
 	inherit eutils cmake-utils
 
-	COMMIT_HASH="89b5eea"
+	COMMIT_HASH="4d29110"
 	MY_SRC_P="ring_${PV}.${COMMIT_HASH}"
 	SRC_URI="https://dl.ring.cx/ring-release/tarballs/${MY_SRC_P}.tar.gz"
 
@@ -33,7 +33,8 @@ IUSE="doc +dbus +video static-libs"
 
 DEPEND="dbus? ( =net-voip/ring-daemon-${PVR}[dbus,video] )
 	!dbus? ( =net-voip/ring-daemon-${PVR}[video] )
-	>=dev-qt/qtdbus-5"
+	>=dev-qt/qtdbus-5
+	>=dev-qt/qtsql-5"
 
 RDEPEND="${DEPEND}"
 
