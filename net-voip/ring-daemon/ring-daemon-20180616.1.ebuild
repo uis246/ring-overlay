@@ -101,7 +101,12 @@ src_configure() {
 		sed -i.bak 's/^DEPS_\(.*\) += \(.*\)'${DEP}'\(.*\)/DEPS_\1 = \2 \3/g' src/*/rules.mak
 		sed -i.bak 's/^DEPS_\(.*\) += \(.*\)$(DEPS_'${DEP}')\(.*\)/DEPS_\1 = \2 \3/g' src/*/rules.mak
 	done
-
+	for FNAME in "upnp_context.h" "upnp_context.cpp" do
+		sed -e 's/UpnpDiscovery/Upnp_Discovery/g' src/upnp/${FNAME} > src/upnp/${FNAME}
+		sed -e 's/UpnpActionComplete/Upnp_Action_Complete/g' src/upnp/${FNAME} > src/upnp/${FNAME}
+		sed -e 's/UpnpStateVarComplete/Upnp_State_Var_Complete/g' src/upnp/${FNAME} > src/upnp/${FNAME}
+	done
+	
 	if use system-pjproject; then
 		rm -r src/pjproject
 	fi
