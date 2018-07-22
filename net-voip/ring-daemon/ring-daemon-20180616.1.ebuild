@@ -39,6 +39,7 @@ RDEPEND="system-pjproject? ( >=net-libs/pjproject-2.5.5:2/9999 )
 	>=dev-libs/crypto++-5.6.5
 	dev-libs/dbus-c++
 	>=dev-libs/jsoncpp-1.7.2
+	dev-libs/msgpack
 
 	>=media-libs/libsamplerate-0.1.8
 	>=media-libs/libsndfile-1.0.25[-minimal]
