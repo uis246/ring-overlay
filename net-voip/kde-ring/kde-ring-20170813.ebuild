@@ -60,7 +60,8 @@ RDEPEND="
 "
 
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )
+	dev-libs/appstream"
 
 kde5_src_configure()  {
 		local mycmakeargs=(
